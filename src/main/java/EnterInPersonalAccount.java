@@ -5,91 +5,100 @@ import org.openqa.selenium.support.How;
 public class EnterInPersonalAccount {
     public static final String URL = "https://stellarburgers.nomoreparties.site/";
 
-    @FindBy(how = How.XPATH, using = "//button[@class='button_button__33qZ0 button_button_type_primary__1O7Bx button_button_size_large__G21Vg']")
-    public SelenideElement HomePageEnterButtonPersonalAccount;
+    @FindBy(how = How.CSS, using = "[class='button_button__33qZ0 button_button_type_primary__1O7Bx button_button_size_large__G21Vg']")
+    public SelenideElement homePageEnterButtonPersonalAccount;
 
-    @FindBy(how = How.XPATH, using = "//input[@class='text input__textfield text_type_main-default']")
-    public SelenideElement EmailBoxEnterInPersonalAccount;
-
-
-    @FindBy(how = How.XPATH, using = ".//input[@name ='Пароль']")
-    public SelenideElement PasswordBoxEnterInPersonalAccount;
+    @FindBy(how = How.CSS, using = "input[type=text]")
+    public SelenideElement emailBoxEnterInPersonalAccount;
 
 
-    @FindBy(how = How.XPATH, using = "//button[@class='button_button__33qZ0 button_button_type_primary__1O7Bx button_button_size_medium__3zxIa']")
-    public SelenideElement EnterButtonForEnterInPersonalAccount;
+    @FindBy(how = How.CSS, using = "input[type=password]")
+    public SelenideElement passwordBoxEnterInPersonalAccount;
+
+
+    @FindBy(how = How.XPATH, using = "//button[text()='Войти']")
+    public SelenideElement enterButtonForEnterInPersonalAccount;
 
       @FindBy(how = How.XPATH, using = ".//p[text()='Личный Кабинет']")
-    public SelenideElement HomePagePersonalAccountButton;
+    public SelenideElement homePagePersonalAccountButton;
 
-    @FindBy(how = How.XPATH, using = ".//a[text()='Зарегистрироваться']")
-    public SelenideElement SingUpButtonOnEnterPageOfPersonalAccount;
+    @FindBy(how = How.CSS, using = "[class = Auth_link__1fOlj]")
+    public SelenideElement singUpButtonOnEnterPageOfPersonalAccount;
 
     @FindBy(how = How.XPATH, using = ".//a[text()='Войти']")
-    public SelenideElement SingUpPageEnterButtonPersonalAccount;
+    public SelenideElement singUpPageEnterButtonPersonalAccount;
 
-    @FindBy(how = How.XPATH, using = ".//a[@class='Auth_link__1fOlj'][text() = 'Восстановить пароль']")
-    public SelenideElement RestorePasswordButtonOnEnterPageOfPersonalAccount;
+    @FindBy(how = How.XPATH, using = ".//a[text() = 'Восстановить пароль']")
+    public SelenideElement restorePasswordButtonOnEnterPageOfPersonalAccount;
 
-    @FindBy(how = How.XPATH, using = ".//a[@class='Auth_link__1fOlj'][text() = 'Войти']")
-    public SelenideElement RecoveryPasswordPageEnterButtonPersonalAccount;
+    @FindBy(how = How.XPATH, using = ".//a[text() = 'Войти']")
+    public SelenideElement recoveryPasswordPageEnterButtonPersonalAccount;
 
     public EnterInPersonalAccount clickEnterButtonOnHomePage() {
-        this.HomePageEnterButtonPersonalAccount.click();
+        this.homePageEnterButtonPersonalAccount.click();
         return this;
     }
 
     public EnterInPersonalAccount clickEmailBox() {
-        this.EmailBoxEnterInPersonalAccount.click();
+        this.emailBoxEnterInPersonalAccount.click();
+        return this;
+    }
+
+    public EnterInPersonalAccount clearEmailBox() {
+        this.emailBoxEnterInPersonalAccount.clear();
         return this;
     }
 
     public EnterInPersonalAccount setEmail(String Email) {
-        this.EmailBoxEnterInPersonalAccount.sendKeys(Email);
+        this.emailBoxEnterInPersonalAccount.sendKeys(Email);
         return this;
     }
 
     public EnterInPersonalAccount clickPasswordBox() {
-        this.PasswordBoxEnterInPersonalAccount.click();
+        this.passwordBoxEnterInPersonalAccount.click();
         return this;
     }
 
+    public EnterInPersonalAccount clearPasswordBox() {
+        this.passwordBoxEnterInPersonalAccount.clear();
+        return this;
+    }
     public EnterInPersonalAccount setPassword(String Password) {
-        this.PasswordBoxEnterInPersonalAccount.sendKeys(Password);
+        this.passwordBoxEnterInPersonalAccount.sendKeys(Password);
         return this;
     }
 
     public EnterInPersonalAccount clickEnterButton() {
-        this.EnterButtonForEnterInPersonalAccount.click();
+        this.enterButtonForEnterInPersonalAccount.click();
         return this;
     }
 
       public boolean isEnterButtonPersonalAccountDisplayed() {
-        return this.HomePageEnterButtonPersonalAccount.isDisplayed();
+        return this.homePageEnterButtonPersonalAccount.isDisplayed();
     }
 
     public EnterInPersonalAccount clickPersonalAccountButton() {
-        this.HomePagePersonalAccountButton.click();
+        this.homePagePersonalAccountButton.click();
         return this;
     }
 
     public EnterInPersonalAccount clickSingUpButton() {
-        this.SingUpButtonOnEnterPageOfPersonalAccount.click();
+        this.singUpButtonOnEnterPageOfPersonalAccount.click();
         return this;
     }
 
     public EnterInPersonalAccount clickSingUpPageEnterButtonPersonalAccount() {
-        this.SingUpPageEnterButtonPersonalAccount.click();
+        this.singUpPageEnterButtonPersonalAccount.click();
         return this;
     }
 
     public EnterInPersonalAccount clickRecoveryPasswordPageEnterButtonPersonalAccount() {
-        this.RecoveryPasswordPageEnterButtonPersonalAccount.click();
+        this.recoveryPasswordPageEnterButtonPersonalAccount.click();
         return this;
     }
 
     public EnterInPersonalAccount clickRestorePasswordButtonOnEnterPageOfPersonalAccount() {
-        this.RestorePasswordButtonOnEnterPageOfPersonalAccount.click();
+        this.restorePasswordButtonOnEnterPageOfPersonalAccount.click();
         return this;
     }
 }

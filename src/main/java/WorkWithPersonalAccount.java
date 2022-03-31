@@ -6,83 +6,83 @@ public class WorkWithPersonalAccount {
     public static final String URL = "https://stellarburgers.nomoreparties.site/";
 
     @FindBy(how = How.XPATH, using = ".//p[text()='Личный Кабинет']")
-    public SelenideElement HomePagePersonalAccountButton;
+    public SelenideElement homePagePersonalAccountButton;
 
     // Кнопка "Войти" на странице входа в аккаунт
-    @FindBy(how = How.XPATH, using = "//button[@class='button_button__33qZ0 button_button_type_primary__1O7Bx button_button_size_medium__3zxIa']")
-    public SelenideElement EnterButtonForEnterInPersonalAccount;
+    @FindBy(how = How.CSS, using = "[class='button_button__33qZ0 button_button_type_primary__1O7Bx button_button_size_medium__3zxIa']")
+    public SelenideElement enterButtonForEnterInPersonalAccount;
 
     // Кнопка "Конструктор" в личном кабинете
-    @FindBy(how = How.XPATH, using = ".//a[@class='AppHeader_header__link__3D_hX']")
-    public SelenideElement PersonalAccountPageConstructorButton;
+    @FindBy(how = How.XPATH, using = ".//p[text()='Конструктор']")
+    public SelenideElement personalAccountPageConstructorButton;
 
     // Логотип “Stellar Burgers”
     @FindBy(how = How.XPATH, using = "//div[@class='AppHeader_header__logo__2D0X2']")
-    public SelenideElement PersonalAccountPageLogotypeStellarBurgers;
+    public SelenideElement personalAccountPageLogotypeStellarBurgers;
 
     //Кнопка "Булки"
     @FindBy(how = How.XPATH, using = ".//span[text()='Булки']")
-    public SelenideElement HomePageBunsButton;
+    public SelenideElement homePageBunsButton;
 
-    @FindBy(how = How.XPATH, using = "//input[@class='text input__textfield text_type_main-default']")
-    public SelenideElement EmailBoxEnterInPersonalAccount;
+    @FindBy(how = How.CSS, using = "input[type=text]")
+    public SelenideElement emailBoxEnterInPersonalAccount;
 
-    @FindBy(how = How.XPATH, using = ".//input[@name ='Пароль']")
-    public SelenideElement PasswordBoxEnterInPersonalAccount;
+    @FindBy(how = How.CSS, using = "input[type=password]")
+    public SelenideElement passwordBoxEnterInPersonalAccount;
 
-    @FindBy(how = How.XPATH, using = "//button[@class='Account_button__14Yp3 text text_type_main-medium text_color_inactive']")
-    public SelenideElement PersonalAccountPageExitButton;
+    @FindBy(how = How.CSS, using = "button[type=button]")
+    public SelenideElement personalAccountPageExitButton;
 
     public WorkWithPersonalAccount clickHomePagePersonalAccountButton() {
-        this.HomePagePersonalAccountButton.click();
+        this.homePagePersonalAccountButton.click();
         return this;
     }
 
     public boolean isEnterButtonForEnterInPersonalAccountDisplayed() {
-        return this.EnterButtonForEnterInPersonalAccount.isDisplayed();
+        return this.enterButtonForEnterInPersonalAccount.isDisplayed();
     }
 
     public WorkWithPersonalAccount clickPersonalAccountPageConstructorButton() {
-        this.PersonalAccountPageConstructorButton.click();
+        this.personalAccountPageConstructorButton.click();
         return this;
     }
 
     public WorkWithPersonalAccount clickPersonalAccountPageLogotypeStellarBurgers() {
-        this.PersonalAccountPageLogotypeStellarBurgers.click();
+        this.personalAccountPageLogotypeStellarBurgers.click();
         return this;
     }
 
     public boolean isHomePageBunsButtonDisplayed() {
-        return this.HomePageBunsButton.isDisplayed();
+        return this.homePageBunsButton.isDisplayed();
     }
 
     public WorkWithPersonalAccount clickEmailBoxEnterInPersonalAccount() {
-        this.EmailBoxEnterInPersonalAccount.click();
+        this.emailBoxEnterInPersonalAccount.click();
         return this;
     }
 
     public WorkWithPersonalAccount setEmail(String Email) {
-        this.EmailBoxEnterInPersonalAccount.sendKeys(Email);
+        this.emailBoxEnterInPersonalAccount.sendKeys(Email);
         return this;
     }
 
     public WorkWithPersonalAccount clickPasswordBoxEnterInPersonalAccount() {
-        this.PasswordBoxEnterInPersonalAccount.click();
+        this.passwordBoxEnterInPersonalAccount.click();
         return this;
     }
 
     public WorkWithPersonalAccount setPassword(String Password) {
-        this.PasswordBoxEnterInPersonalAccount.sendKeys(Password);
+        this.passwordBoxEnterInPersonalAccount.sendKeys(Password);
         return this;
     }
 
     public WorkWithPersonalAccount clickEnterButtonForEnterInPersonalAccount() {
-        this.EnterButtonForEnterInPersonalAccount.click();
+        this.enterButtonForEnterInPersonalAccount.click();
         return this;
     }
 
     public WorkWithPersonalAccount clickPersonalAccountPageExitButton() {
-        this.PersonalAccountPageExitButton.click();
+        this.personalAccountPageExitButton.click();
         return this;
     }
 }

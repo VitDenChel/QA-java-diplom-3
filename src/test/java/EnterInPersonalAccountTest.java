@@ -2,86 +2,90 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import static com.codeborne.selenide.Selenide.open;
-import static com.codeborne.selenide.Selenide.page;
 
 public class EnterInPersonalAccountTest {
+
     @Test
-    public void EnterInPersonalAccountTest() {
+    public void enterInPersonalAccountUsingEnterButtonTest() {
 
         final String givenEmail = "vvhgjsilan@yandex.ru";
         final String givenPassword = "OuNuVzmAzZ";
 
-        EnterInPersonalAccount enterInPersonalAccount = open(EnterInPersonalAccount.URL, EnterInPersonalAccount.class)
+        boolean isEnterButtonPersonalAccountDisplayed = open(EnterInPersonalAccount.URL, EnterInPersonalAccount.class)
                 .clickEnterButtonOnHomePage()
                 .clickEmailBox()
+                .clearEmailBox()
                 .setEmail(givenEmail)
                 .clickPasswordBox()
+                .clearPasswordBox()
                 .setPassword(givenPassword)
-                .clickEnterButton();
-
-        boolean isEnterButtonPersonalAccountDisplayed = page(EnterInPersonalAccount.class)
+                .clickEnterButton()
                 .isEnterButtonPersonalAccountDisplayed();
+
         Assert.assertFalse("Enter button is appeared", isEnterButtonPersonalAccountDisplayed);
     }
 
     @Test
-    public void EnterInPersonalAccountUsingPersonalAccountButtonTest() {
+    public void enterInPersonalAccountUsingPersonalAccountButtonTest() {
 
         final String givenEmail = "vvhgjsilan@yandex.ru";
         final String givenPassword = "OuNuVzmAzZ";
 
-        EnterInPersonalAccount enterInPersonalAccount = open(EnterInPersonalAccount.URL, EnterInPersonalAccount.class)
+        boolean isEnterButtonPersonalAccountDisplayed = open(EnterInPersonalAccount.URL, EnterInPersonalAccount.class)
                 .clickPersonalAccountButton()
                 .clickEmailBox()
+                .clearEmailBox()
                 .setEmail(givenEmail)
                 .clickPasswordBox()
+                .clearPasswordBox()
                 .setPassword(givenPassword)
-                .clickEnterButton();
-
-        boolean isEnterButtonPersonalAccountDisplayed = page(EnterInPersonalAccount.class)
+                .clickEnterButton()
                 .isEnterButtonPersonalAccountDisplayed();
+
         Assert.assertFalse("Enter button is appeared", isEnterButtonPersonalAccountDisplayed);
     }
 
     @Test
-    public void EnterInPersonalAccountUsingRegistrationFormTest() {
+    public void enterInPersonalAccountUsingRegistrationFormTest() {
 
         final String givenEmail = "vvhgjsilan@yandex.ru";
         final String givenPassword = "OuNuVzmAzZ";
 
-        EnterInPersonalAccount enterInPersonalAccount = open(EnterInPersonalAccount.URL, EnterInPersonalAccount.class)
+        boolean isEnterButtonPersonalAccountDisplayed = open(EnterInPersonalAccount.URL, EnterInPersonalAccount.class)
                 .clickEnterButtonOnHomePage()
                 .clickSingUpButton()
                 .clickSingUpPageEnterButtonPersonalAccount()
                 .clickEmailBox()
+                .clearEmailBox()
                 .setEmail(givenEmail)
                 .clickPasswordBox()
+                .clearPasswordBox()
                 .setPassword(givenPassword)
-                .clickEnterButton();
-
-        boolean isEnterButtonPersonalAccountDisplayed = page(EnterInPersonalAccount.class)
+                .clickEnterButton()
                 .isEnterButtonPersonalAccountDisplayed();
+
         Assert.assertFalse("Enter button is appeared", isEnterButtonPersonalAccountDisplayed);
     }
 
     @Test
-    public void EnterInPersonalAccountUsingRecoveryPasswordFormTest() {
+    public void enterInPersonalAccountUsingRecoveryPasswordFormTest() {
 
         final String givenEmail = "vvhgjsilan@yandex.ru";
         final String givenPassword = "OuNuVzmAzZ";
 
-        EnterInPersonalAccount enterInPersonalAccount = open(EnterInPersonalAccount.URL, EnterInPersonalAccount.class)
+        boolean isEnterButtonPersonalAccountDisplayed = open(EnterInPersonalAccount.URL, EnterInPersonalAccount.class)
                 .clickEnterButtonOnHomePage()
                 .clickRestorePasswordButtonOnEnterPageOfPersonalAccount()
                 .clickRecoveryPasswordPageEnterButtonPersonalAccount()
                 .clickEmailBox()
+                .clearEmailBox()
                 .setEmail(givenEmail)
                 .clickPasswordBox()
+                .clearPasswordBox()
                 .setPassword(givenPassword)
-                .clickEnterButton();
-
-        boolean isEnterButtonPersonalAccountDisplayed = page(EnterInPersonalAccount.class)
+                .clickEnterButton()
                 .isEnterButtonPersonalAccountDisplayed();
+
         Assert.assertFalse("Enter button is appeared", isEnterButtonPersonalAccountDisplayed);
     }
 }

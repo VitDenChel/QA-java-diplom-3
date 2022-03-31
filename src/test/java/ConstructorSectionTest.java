@@ -5,7 +5,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class ConstructorSectionTest {
     @Test
-    public void CheckLinkToBunsSectionTest() throws InterruptedException {
+    public void checkLinkToBunsSectionTest() {
         boolean isHomePageBunsSectionSelectedDisplayed = open(ConstractorSection.URL, ConstractorSection.class)
                 .isHomePageBunsSectionSelectedDisplayed();
 
@@ -13,7 +13,7 @@ public class ConstructorSectionTest {
     }
 
     @Test
-    public void CheckLinkToSauceSectionTest() throws InterruptedException {
+    public void checkLinkToSauceSectionTest() {
         boolean isHomePageSauceSectionSelectedDisplayed = open(ConstractorSection.URL, ConstractorSection.class)
                 .clickHomePageSauceSection()
                 .isHomePageSauceSectionSelectedDisplayed();
@@ -22,7 +22,7 @@ public class ConstructorSectionTest {
     }
 
     @Test
-    public void CheckLinkToFillingSectionTest() throws InterruptedException {
+    public void checkLinkToFillingSectionTest() {
         boolean isHomePageFillingSectionSelectedDisplayed = open(ConstractorSection.URL, ConstractorSection.class)
                 .clickHomePageFillingSection()
                 .isHomePageFillingSectionSelectedDisplayed();

@@ -6,7 +6,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class WorkWithPersonalAccountTest {
 
     @Test
-    public void CheckLinkByClickingOnPersonalAccountTest() {
+    public void checkLinkByClickingOnPersonalAccountTest() {
         boolean isEnterButtonForEnterInPersonalAccountDisplayed = open(WorkWithPersonalAccount.URL, WorkWithPersonalAccount.class)
                 .clickHomePagePersonalAccountButton()
                 .isEnterButtonForEnterInPersonalAccountDisplayed();
@@ -15,7 +15,7 @@ public class WorkWithPersonalAccountTest {
     }
 
     @Test
-    public void CheckLinkByClickingOnConstructorButtonFromPersonalAccountTest() {
+    public void checkLinkByClickingOnConstructorButtonFromPersonalAccountTest() {
         boolean isHomePageBunsButtonDisplayed = open(WorkWithPersonalAccount.URL, WorkWithPersonalAccount.class)
                 .clickHomePagePersonalAccountButton()
                 .clickPersonalAccountPageConstructorButton()
@@ -25,7 +25,7 @@ public class WorkWithPersonalAccountTest {
     }
 
     @Test
-    public void CheckLinkByClickingOnLogotypeStellarBurgersFromPersonalAccountTest() {
+    public void checkLinkByClickingOnLogotypeStellarBurgersFromPersonalAccountTest() {
         boolean isHomePageBunsButtonDisplayed = open(WorkWithPersonalAccount.URL, WorkWithPersonalAccount.class)
                 .clickHomePagePersonalAccountButton()
                 .clickPersonalAccountPageLogotypeStellarBurgers()
@@ -35,7 +35,7 @@ public class WorkWithPersonalAccountTest {
     }
 
     @Test
-    public void ExitFromPersonalAccountTest() {
+    public void exitFromPersonalAccountTest() {
 
         final String givenEmail = "vvhgjsilan@yandex.ru";
         final String givenPassword = "OuNuVzmAzZ";

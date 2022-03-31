@@ -6,47 +6,47 @@ public class ConstractorSection {
     public static final String URL = "https://stellarburgers.nomoreparties.site/";
 
     @FindBy(how = How.XPATH, using = ".//span[text()='Булки']")
-    public SelenideElement HomePageBunsSection;
+    public SelenideElement homePageBunsSection;
 
     @FindBy(how = How.XPATH, using = ".//span[text()='Соусы']")
-    public SelenideElement HomePageSauceSection;
+    public SelenideElement homePageSauceSection;
 
     @FindBy(how = How.XPATH, using = ".//span[text()='Начинки']")
-    public SelenideElement HomePageFillingSection;
+    public SelenideElement homePageFillingSection;
 
     @FindBy(how = How.XPATH, using = "//div[@class = 'tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect']/span[@class = 'text text_type_main-default'][text() = 'Булки']")
-    public SelenideElement HomePageBunsSectionSelected;
+    public SelenideElement homePageBunsSectionSelected;
 
     @FindBy(how = How.XPATH, using = "//div[@class = 'tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect']/span[@class = 'text text_type_main-default'][text() = 'Соусы']")
-    public SelenideElement HomePageSauceSectionSelected;
+    public SelenideElement homePageSauceSectionSelected;
 
     @FindBy(how = How.XPATH, using = "//div[@class = 'tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect']/span[@class = 'text text_type_main-default'][text() = 'Начинки']")
-    public SelenideElement HomePageFillingSectionSelected;
+    public SelenideElement homePageFillingSectionSelected;
 
     public ConstractorSection clickHomePageBunsSection() {
-        this.HomePageBunsSection.click();
+        this.homePageBunsSection.click();
         return this;
     }
 
     public ConstractorSection clickHomePageSauceSection() {
-        this.HomePageSauceSection.click();
+        this.homePageSauceSection.click();
         return this;
     }
 
     public ConstractorSection clickHomePageFillingSection() {
-        this.HomePageFillingSection.click();
+        this.homePageFillingSection.click();
         return this;
     }
 
     public boolean isHomePageBunsSectionSelectedDisplayed() {
-        return this.HomePageBunsSectionSelected.isDisplayed();
+        return this.homePageBunsSectionSelected.isDisplayed();
     }
 
     public boolean isHomePageSauceSectionSelectedDisplayed() {
-        return this.HomePageSauceSectionSelected.isDisplayed();
+        return this.homePageSauceSectionSelected.isDisplayed();
     }
 
     public boolean isHomePageFillingSectionSelectedDisplayed() {
-        return this.HomePageFillingSectionSelected.isDisplayed();
+        return this.homePageFillingSectionSelected.isDisplayed();
     }
 }
